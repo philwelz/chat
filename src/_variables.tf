@@ -128,3 +128,7 @@ variable "github_client_secret" {
 variable "github_client_id" {
   sensitive = true
 }
+
+# variable "cloudflare_api_token" {
+#   sensitive = true
+# }
