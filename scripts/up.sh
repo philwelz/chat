@@ -158,14 +158,23 @@ else
     echo "Role assignment Blob Data Owner created..."
 fi
 
-# create federated credential for environment
+# create federated credential for branches
 az identity federated-credential create \
     --resource-group $rg \
     --identity-name "mi-$name-$scope" \
     --name "fc-github-$name-$scope" \
     --issuer "https://token.actions.githubusercontent.com" \
     --subject "repo:$ghRepo:*"\
-    --audiences "["api://AzureADTokenExchange"]"
+    --audiences "api://AzureADTokenExchange"
+
+# create federated credential for environment
+az identity federated-credential create \
+    --resource-group $rg \
+    --identity-name "mi-$name-$scope-pr" \
+    --name "fc-github-$name-$scope" \
+    --issuer "https://token.actions.githubusercontent.com" \
+    --subject "repo:$ghRepo:pull_request"\
+    --audiences "api://AzureADTokenExchange"
 
 if test $? -ne 0
 then

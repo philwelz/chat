@@ -24,6 +24,9 @@ terraform {
   }
 
   required_version = "=1.10.4"
+
+  backend "azurerm" {
+  }
 }
 
 provider "azurerm" {
