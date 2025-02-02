@@ -4,6 +4,7 @@ resource "azurerm_container_app" "librechat" {
   container_app_environment_id = azurerm_container_app_environment.librechat.id
   resource_group_name          = azurerm_resource_group.core.name
   revision_mode                = "Single"
+  tags                         = local.common_tags
 
   ingress {
     external_enabled = true
@@ -185,7 +186,7 @@ resource "azurerm_container_app" "librechat" {
   }
 }
 
-resource "azurerm_container_app_custom_domain" "philipwelz" {
+resource "azurerm_container_app_custom_domain" "librechat" {
   name             = "${var.host}.${var.custom_domain}"
   container_app_id = azurerm_container_app.librechat.id
 

@@ -20,6 +20,7 @@ resource "azurerm_cosmosdb_account" "librechat" {
     "40.80.152.199",
     "3.95.130.121",
   ]
+  tags = local.common_tags
 
   consistency_policy {
     consistency_level       = "BoundedStaleness"
