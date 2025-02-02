@@ -19,7 +19,6 @@ jobs:
         with:
           app-id: ${{ secrets.RENOVATE_APP_ID }}
           private-key: ${{ secrets.RENOVATE_PRIVATE_KEY }}
-          owner: ${{ github.repository_owner }}
 
       - name: Self-hosted Renovate
         uses: renovatebot/github-action@d385c88822a237acaead89c462fa0aef7502748f # v41.0.11
@@ -32,7 +31,7 @@ jobs:
           # Onboarding not needed for self hosted
           RENOVATE_ONBOARDING: "false"
           # Username to be assigned to the PRs
-          RENOVATE_ASSIGNES: "marcoschmidl"
+          RENOVATE_ASSIGNES: "philwelz"
           # Username for GitHub authentication (should match GitHub App name + [bot])
           RENOVATE_USERNAME: "renovate-bot-pw[bot]"
           # Git commit author used, must match GitHub App
@@ -40,4 +39,4 @@ jobs:
           # Use GitHub API to create commits (this allows for signed commits from GitHub App)
           RENOVATE_PLATFORM_COMMIT: "false"
           # Log level for Renovate
-          LOG_LEVEL: ${{ inputs.logLevel || 'debug' }}
+          LOG_LEVEL: 'debug'
