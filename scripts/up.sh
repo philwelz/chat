@@ -164,7 +164,7 @@ az identity federated-credential create \
     --identity-name "mi-$name-$scope" \
     --name "fc-github-$name-$scope" \
     --issuer "https://token.actions.githubusercontent.com" \
-    --subject "repo:$ghRepo:*"\
+    --subject "repo:$ghRepo::ref:refs/heads/main"\
     --audiences "api://AzureADTokenExchange"
 
 # create federated credential for environment

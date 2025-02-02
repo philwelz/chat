@@ -5,6 +5,7 @@ resource "azurerm_container_app" "search" {
   container_app_environment_id = azurerm_container_app_environment.librechat.id
   resource_group_name          = azurerm_resource_group.core.name
   revision_mode                = "Single"
+  tags                         = local.common_tags
 
   ingress {
     external_enabled = false

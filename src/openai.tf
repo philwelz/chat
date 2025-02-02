@@ -4,6 +4,7 @@ resource "azurerm_cognitive_account" "openai" {
   resource_group_name = azurerm_resource_group.core.name
   kind                = "OpenAI"
   sku_name            = "S0"
+  tags                = local.common_tags
 }
 
 resource "azurerm_cognitive_deployment" "azure_openai_models" {
