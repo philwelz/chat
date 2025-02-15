@@ -3,7 +3,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "4.17.0"
+      version = "4.19.0"
     }
     random = {
       source  = "hashicorp/random"
@@ -19,7 +19,7 @@ terraform {
     }
     cloudflare = {
       source  = "cloudflare/cloudflare"
-      version = "5.0.0"
+      version = "5.1.0"
     }
   }
 
