@@ -142,16 +142,16 @@ resource "azurerm_container_app" "librechat" {
       dynamic "env" {
         for_each = var.azure_openai_enabled == true ? [1] : []
         content {
-          name        = "OPENAI_MODELS"
-          secret_name = join(",", [for model in var.openai_models : model.name])
+          name  = "OPENAI_MODELS"
+          value = join(",", [for model in var.openai_models : model.name])
         }
       }
 
       dynamic "env" {
         for_each = var.azure_openai_enabled == true ? [1] : []
         content {
-          name        = "OPENAI_MODERATION"
-          secret_name = false
+          name  = "OPENAI_MODERATION"
+          value = false
         }
       }
 
