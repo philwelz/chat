@@ -118,22 +118,85 @@ resource "azurerm_container_app" "librechat" {
       }
 
       ###########################################
+      # MongoDb
+      ###########################################
+
+      env {
+        name  = "ENDPOINTS"
+        value = join(", ", local.librechat_endpoints)
+      }
+
+      ###########################################
       # OpenAI
       ###########################################
 
       # Your OpenAI API key.
-      env {
-        name        = "OPENAI_API_KEY"
-        secret_name = "openaikey"
+      dynamic "env" {
+        for_each = var.azure_openai_enabled == true ? [1] : []
+        content {
+          name        = "OPENAI_API_KEY"
+          secret_name = "openaikey"
+        }
+      }
+
+      dynamic "env" {
+        for_each = var.azure_openai_enabled == true ? [1] : []
+        content {
+          name        = "OPENAI_MODELS"
+          secret_name = join(",", [for model in var.openai_models : model.name])
+        }
+      }
+
+      dynamic "env" {
+        for_each = var.azure_openai_enabled == true ? [1] : []
+        content {
+          name        = "OPENAI_MODERATION"
+          secret_name = false
+        }
       }
 
       ###########################################
       # Azure OpoenAI
       ###########################################
 
-      env {
-        name        = "AZURE_API_KEY"
-        secret_name = "azureopenaikey"
+      dynamic "env" {
+        for_each = var.azure_openai_enabled == true ? [1] : []
+        content {
+          name        = "AZURE_API_KEY"
+          secret_name = "azureopenaikey"
+        }
+      }
+
+      dynamic "env" {
+        for_each = var.azure_openai_enabled == true ? [1] : []
+        content {
+          name  = "AZURE_OPENAI_MODELS"
+          value = join(",", [for model in var.azure_openai_models : model.name])
+        }
+      }
+
+      dynamic "env" {
+        for_each = var.azure_openai_enabled == true ? [1] : []
+        content {
+          name  = "AZURE_USE_MODEL_AS_DEPLOYMENT_NAME"
+          value = true
+        }
+      }
+
+      dynamic "env" {
+        for_each = var.azure_openai_enabled == true ? [1] : []
+        content {
+          name  = "AZURE_OPENAI_API_INSTANCE_NAME"
+          value = var.location
+        }
+      }
+
+      dynamic "env" {
+        for_each = var.azure_openai_enabled == true ? [1] : []
+        content {
+          name  = "AZURE_OPENAI_API_VERSION"
+          value = var.azure_openai_api_version
+        }
       }
 
       ###########################################
@@ -147,6 +210,7 @@ resource "azurerm_container_app" "librechat" {
           value = true
         }
       }
+
       dynamic "env" {
         for_each = var.search_enabled == true ? [1] : []
         content {
@@ -154,6 +218,7 @@ resource "azurerm_container_app" "librechat" {
           secret_name = "meilimasterkey"
         }
       }
+
       dynamic "env" {
         for_each = var.search_enabled == true ? [1] : []
         content {
@@ -161,6 +226,7 @@ resource "azurerm_container_app" "librechat" {
           value = true
         }
       }
+
       dynamic "env" {
         for_each = var.search_enabled == true ? [1] : []
         content {

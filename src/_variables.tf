@@ -49,7 +49,20 @@ variable "librechat_endpoints" {
     {
       name = "azureOpenAI"
     },
+    {
+      name = "agents"
+    },
   ]
+}
+
+###########################################
+# Agents
+###########################################
+
+variable "agents_enabled" {
+  type        = bool
+  description = "Enables Agents feature"
+  default     = true
 }
 
 ###########################################
@@ -84,6 +97,13 @@ variable "openai_models" {
 ###########################################
 # Azure OpenAI
 ###########################################
+
+variable "azure_openai_enabled" {
+  type        = bool
+  description = "Enables Azure OpenAI integration"
+  default     = true
+
+}
 
 variable "azure_openai_api_version" {
   type        = string
