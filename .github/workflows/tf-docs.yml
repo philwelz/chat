@@ -25,6 +25,7 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
           sparse-checkout: src
+          ref: ${{ github.event.pull_request.head.ref }}
 
       - name: Render terraform docs and push changes back to PR
         uses: terraform-docs/gh-actions@d8f1a2272f04d6124103eb65815f007e091e756a # v1.3.0
