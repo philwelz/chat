@@ -3,7 +3,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.11.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.11.1 |
 | <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | 4.22.0 |
 | <a name="requirement_cloudflare"></a> [cloudflare](#requirement\_cloudflare) | 5.1.0 |
 | <a name="requirement_local"></a> [local](#requirement\_local) | =2.5.2 |
