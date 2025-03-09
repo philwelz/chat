@@ -64,8 +64,8 @@ module.exports = {
           "_variables.tf"
         ],
         matchStrings: [
-          "# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\n.*?: (?<currentValue>.*)",
-          //'# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?(?<currentValue>[^"]+?)"?\\s',
+          //"# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\n.*?: (?<currentValue>.*)",
+          '# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\n.*?[:=] "?v?(?<currentValue>[^"\n]*)"?'
         ],
       },
     ],
