@@ -9,6 +9,8 @@ resource "azurerm_cosmosdb_account" "librechat" {
   mongo_server_version              = "7.0"
   is_virtual_network_filter_enabled = false
   public_network_access_enabled     = true
+  tags                              = local.common_tags
+
   ip_range_filter = [
     "0.0.0.0",
     "13.91.105.215",
@@ -20,7 +22,6 @@ resource "azurerm_cosmosdb_account" "librechat" {
     "40.80.152.199",
     "3.95.130.121",
   ]
-  tags = local.common_tags
 
   consistency_policy {
     consistency_level       = "BoundedStaleness"

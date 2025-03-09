@@ -26,14 +26,21 @@ variable "host" {
 
 variable "search_enabled" {
   type        = bool
-  description = "Enables Meili Search integration to search messages"
+  description = "Enables Meilisearch integration to search messages"
   default     = false
+}
+
+variable "search_version" {
+  type        = string
+  description = "Meilisearch version"
+  # renovate: datasource=docker depName=getmeili/meilisearch versioning=semver
+  default = "v1.13.3"
 }
 
 variable "librechat_version" {
   type        = string
   description = "LibreChat version"
-  # renovate: datasource=github-tags depName=danny-avila/LibreChat versioning=loose
+  # renovate: datasource=docker depName=ghcr.io/danny-avila/librechat versioning=semver
   default = "v0.7.7"
 }
 

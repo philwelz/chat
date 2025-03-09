@@ -2,7 +2,6 @@ module.exports = {
     platform: "github",
     automergeType: "pr",
     platformAutomerge: true,
-    gitLabIgnoreApprovals: true,
     onboarding: false,
     onboardingConfigFileName: "renovate.json",
     enabledManagers: [
@@ -23,8 +22,6 @@ module.exports = {
       ":prConcurrentLimitNone",
       ":label(renovate)",
       ":rebaseStalePrs",
-      // add docker digests if missing
-      "docker:pinDigests",
       // automerge digest bumps e.g. in docker references
       "default:automergeDigest",
       // automatically pin action digests

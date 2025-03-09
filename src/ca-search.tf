@@ -22,11 +22,10 @@ resource "azurerm_container_app" "search" {
     value = random_string.meilisearch_master_key.result
   }
 
-
   template {
     container {
       name   = "meilisearch"
-      image  = "getmeili/meilisearch:v1.12.7"
+      image  = "getmeili/meilisearch:${var.search_version}"
       cpu    = 0.5
       memory = "1Gi"
 
