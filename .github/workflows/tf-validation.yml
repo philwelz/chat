@@ -51,7 +51,7 @@ jobs:
         uses: hashicorp/setup-terraform@b9cd54a3c349d3f38e8881555d616ced269862dd # v3
         with:
           # renovate: datasource=github-releases depName=hashicorp/terraform versioning=hashicorp
-          terraform_version: 1.11.1
+          terraform_version: "1.11.1"
 
       - name: Terraform Init
         id: init
