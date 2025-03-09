@@ -62,7 +62,7 @@
 | <a name="input_github_client_secret"></a> [github\_client\_secret](#input\_github\_client\_secret) | GitHub App client Id for authentication | `any` | n/a | yes |
 | <a name="input_host"></a> [host](#input\_host) | Hostname for the Container Apps Custom Domain | `string` | `"chat"` | no |
 | <a name="input_librechat_endpoints"></a> [librechat\_endpoints](#input\_librechat\_endpoints) | Values for LibreChat endpoints | <pre>list(object({<br/>    name = string<br/>  }))</pre> | <pre>[<br/>  {<br/>    "name": "openAI"<br/>  },<br/>  {<br/>    "name": "azureOpenAI"<br/>  },<br/>  {<br/>    "name": "agents"<br/>  }<br/>]</pre> | no |
-| <a name="input_librechat_version"></a> [librechat\_version](#input\_librechat\_version) | LibreChat version | `string` | `"v0.7.6"` | no |
+| <a name="input_librechat_version"></a> [librechat\_version](#input\_librechat\_version) | LibreChat version | `string` | `"v0.7.7"` | no |
 | <a name="input_location"></a> [location](#input\_location) | The location used for all resources | `string` | `"swedencentral"` | no |
 | <a name="input_openai_api_key"></a> [openai\_api\_key](#input\_openai\_api\_key) | Value for the OpenAI API key | `any` | n/a | yes |
 | <a name="input_openai_enabled"></a> [openai\_enabled](#input\_openai\_enabled) | Enables OpenAI integration | `bool` | `true` | no |
