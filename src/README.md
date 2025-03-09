@@ -67,7 +67,8 @@
 | <a name="input_openai_api_key"></a> [openai\_api\_key](#input\_openai\_api\_key) | Value for the OpenAI API key | `any` | n/a | yes |
 | <a name="input_openai_enabled"></a> [openai\_enabled](#input\_openai\_enabled) | Enables OpenAI integration | `bool` | `true` | no |
 | <a name="input_openai_models"></a> [openai\_models](#input\_openai\_models) | Values for enabled OpenAI models | <pre>list(object({<br/>    name = string<br/>  }))</pre> | <pre>[<br/>  {<br/>    "name": "gpt-4o"<br/>  },<br/>  {<br/>    "name": "gpt-4o-mini"<br/>  },<br/>  {<br/>    "name": "o3-mini"<br/>  }<br/>]</pre> | no |
-| <a name="input_search_enabled"></a> [search\_enabled](#input\_search\_enabled) | Enables Meili Search integration to search messages | `bool` | `false` | no |
+| <a name="input_search_enabled"></a> [search\_enabled](#input\_search\_enabled) | Enables Meilisearch integration to search messages | `bool` | `false` | no |
+| <a name="input_search_version"></a> [search\_version](#input\_search\_version) | Meilisearch version | `string` | `"v1.13.3"` | no |
 | <a name="input_stage"></a> [stage](#input\_stage) | (Required) The suffix for the resources created in the specified environment | `string` | `"openai"` | no |
 
 ## Outputs
