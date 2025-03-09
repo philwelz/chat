@@ -125,8 +125,18 @@ variable "azure_openai_models" {
       rate_limit_per_minute_in_thousand = 10
     },
     {
-      name                              = "o1-mini"
-      version                           = "2024-09-12"
+      name                              = "gpt-4o-mini"
+      version                           = "2024-07-18"
+      rate_limit_per_minute_in_thousand = 10
+    },
+    {
+      name                              = "o1"
+      version                           = "2024-12-17"
+      rate_limit_per_minute_in_thousand = 10
+    },
+    {
+      name                              = "o3-mini"
+      version                           = "2025-01-31"
       rate_limit_per_minute_in_thousand = 10
     },
   ]
