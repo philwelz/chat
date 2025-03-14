@@ -19,7 +19,6 @@ locals {
     CUSTOM_FOOTER                = "Made with ❤️"
     SESSION_EXPIRY               = "1000 * 60 * 15"
     REFRESH_TOKEN_EXPIRY         = "(1000 * 60 * 60 * 24) * 7"
-    SHOW_BIRTHDAY_ICON           = true
     NO_INDEX                     = true # Prevent Public Search Engines Indexing
     CONSOLE_JSON                 = false
     SHOW_BIRTHDAY_ICON           = false

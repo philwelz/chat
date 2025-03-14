@@ -13,8 +13,5 @@ resource "azurerm_resource_group" "core" {
 # Fetch Information
 ################################
 
-data "azurerm_subscription" "current" {
-}
-
 data "azurerm_client_config" "current" {
 }

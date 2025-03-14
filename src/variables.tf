@@ -3,6 +3,7 @@
 ################################
 
 variable "stage" {
+  type        = string
   description = "(Required) The suffix for the resources created in the specified environment"
   default     = "openai"
 }
@@ -44,23 +45,23 @@ variable "librechat_version" {
   default = "v0.7.7"
 }
 
-variable "librechat_endpoints" {
-  type = list(object({
-    name = string
-  }))
-  description = "Values for LibreChat endpoints"
-  default = [
-    {
-      name = "openAI"
-    },
-    {
-      name = "azureOpenAI"
-    },
-    {
-      name = "agents"
-    },
-  ]
-}
+# variable "librechat_endpoints" {
+#   type = list(object({
+#     name = string
+#   }))
+#   description = "Values for LibreChat endpoints"
+#   default = [
+#     {
+#       name = "openAI"
+#     },
+#     {
+#       name = "azureOpenAI"
+#     },
+#     {
+#       name = "agents"
+#     },
+#   ]
+# }
 
 ###########################################
 # Agents
@@ -154,26 +155,31 @@ variable "azure_openai_models" {
 ###########################################
 
 variable "openai_api_key" {
+  type        = string
   description = "Value for the OpenAI API key"
   sensitive   = true
 }
 
 variable "github_client_secret" {
+  type        = string
   description = "GitHub App client Id for authentication"
   sensitive   = true
 }
 
 variable "github_client_id" {
+  type        = string
   description = "GitHub App client secret for authentication"
   sensitive   = true
 }
 
 variable "cloudflare_zone_id" {
+  type        = string
   description = "Value for the Cloudflare Zone ID"
   sensitive   = true
 }
 
 variable "custom_domain" {
+  type        = string
   description = "Value for the custom domain"
   sensitive   = true
 }
