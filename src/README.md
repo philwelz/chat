@@ -4,16 +4,16 @@
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.11.2 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | 4.23.0 |
-| <a name="requirement_cloudflare"></a> [cloudflare](#requirement\_cloudflare) | 5.1.0 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | 4.24.0 |
+| <a name="requirement_cloudflare"></a> [cloudflare](#requirement\_cloudflare) | 5.2.0 |
 | <a name="requirement_random"></a> [random](#requirement\_random) | 3.7.1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 4.23.0 |
-| <a name="provider_cloudflare"></a> [cloudflare](#provider\_cloudflare) | 5.1.0 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 4.24.0 |
+| <a name="provider_cloudflare"></a> [cloudflare](#provider\_cloudflare) | 5.2.0 |
 | <a name="provider_random"></a> [random](#provider\_random) | 3.7.1 |
 
 ## Modules
@@ -26,24 +26,24 @@
 
 | Name | Type |
 |------|------|
-| [azurerm_cognitive_account.openai](https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/cognitive_account) | resource |
-| [azurerm_cognitive_deployment.azure_openai_models](https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/cognitive_deployment) | resource |
-| [azurerm_container_app.librechat](https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/container_app) | resource |
-| [azurerm_container_app.search](https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/container_app) | resource |
-| [azurerm_container_app_custom_domain.librechat](https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/container_app_custom_domain) | resource |
-| [azurerm_container_app_environment.librechat](https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/container_app_environment) | resource |
-| [azurerm_cosmosdb_account.librechat](https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/cosmosdb_account) | resource |
-| [azurerm_resource_group.core](https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/resources/resource_group) | resource |
-| [cloudflare_dns_record.librechat](https://registry.terraform.io/providers/cloudflare/cloudflare/5.1.0/docs/resources/dns_record) | resource |
-| [cloudflare_dns_record.verification](https://registry.terraform.io/providers/cloudflare/cloudflare/5.1.0/docs/resources/dns_record) | resource |
+| [azurerm_cognitive_account.openai](https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/cognitive_account) | resource |
+| [azurerm_cognitive_deployment.azure_openai_models](https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/cognitive_deployment) | resource |
+| [azurerm_container_app.librechat](https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/container_app) | resource |
+| [azurerm_container_app.search](https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/container_app) | resource |
+| [azurerm_container_app_custom_domain.librechat](https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/container_app_custom_domain) | resource |
+| [azurerm_container_app_environment.librechat](https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/container_app_environment) | resource |
+| [azurerm_cosmosdb_account.librechat](https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/cosmosdb_account) | resource |
+| [azurerm_resource_group.core](https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/resources/resource_group) | resource |
+| [cloudflare_dns_record.librechat](https://registry.terraform.io/providers/cloudflare/cloudflare/5.2.0/docs/resources/dns_record) | resource |
+| [cloudflare_dns_record.verification](https://registry.terraform.io/providers/cloudflare/cloudflare/5.2.0/docs/resources/dns_record) | resource |
 | [random_string.cosmosdb_root_password](https://registry.terraform.io/providers/hashicorp/random/3.7.1/docs/resources/string) | resource |
 | [random_string.creds_iv](https://registry.terraform.io/providers/hashicorp/random/3.7.1/docs/resources/string) | resource |
 | [random_string.creds_key](https://registry.terraform.io/providers/hashicorp/random/3.7.1/docs/resources/string) | resource |
 | [random_string.jwt_refresh_secret](https://registry.terraform.io/providers/hashicorp/random/3.7.1/docs/resources/string) | resource |
 | [random_string.jwt_secret](https://registry.terraform.io/providers/hashicorp/random/3.7.1/docs/resources/string) | resource |
 | [random_string.meilisearch_master_key](https://registry.terraform.io/providers/hashicorp/random/3.7.1/docs/resources/string) | resource |
-| [azurerm_client_config.current](https://registry.terraform.io/providers/hashicorp/azurerm/4.23.0/docs/data-sources/client_config) | data source |
-| [cloudflare_zone.default](https://registry.terraform.io/providers/cloudflare/cloudflare/5.1.0/docs/data-sources/zone) | data source |
+| [azurerm_client_config.current](https://registry.terraform.io/providers/hashicorp/azurerm/4.24.0/docs/data-sources/client_config) | data source |
+| [cloudflare_zone.default](https://registry.terraform.io/providers/cloudflare/cloudflare/5.2.0/docs/data-sources/zone) | data source |
 
 ## Inputs
 
